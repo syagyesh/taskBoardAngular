@@ -16,6 +16,10 @@
     margin: 0 2em;
 }
 
+.example-container:hover {
+    cursor: grab;
+}
+
 .example-container > span {
     font-size: 20px;
     color: #fff;
