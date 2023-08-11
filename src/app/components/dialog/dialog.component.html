@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Fill Details Here</h1>
+<div mat-dialog-content>
+    <form [formGroup]="dataForm" class="form-container">
+        <mat-form-field class="task">
+            <mat-label>Task</mat-label>
+            <input formControlName="title" matInput>
+        </mat-form-field>
+        <mat-form-field class="desc">
+            <mat-label>Description</mat-label>
+            <input formControlName="desc" matInput>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="primary" (click)="addData()">Add</button>
+    <button mat-raised-button mat-dialog-close color="warn" (click)="closeData()">Cancel</button>
+</div>
+

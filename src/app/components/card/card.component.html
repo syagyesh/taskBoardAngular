@@ -1,0 +1,81 @@
+<mat-card>
+    <mat-card-title class="title">
+        <span>Taskboard</span>
+        <button mat-raised-button color="primary" (click)="openDialog()">Create Task</button>
+    </mat-card-title>
+    <mat-card-content>
+        <div cdkDropListGroup class="data-container">
+            <div class="example-container">
+              <span class="todo-header">Todo</span>
+              <div
+                id="todo"
+                cdkDropList
+                [cdkDropListData]="todo"
+                class="example-list indi-data"
+                (cdkDropListDropped)="drop($event)">
+                <mat-card class="example-box todo-data" *ngFor="let item of todo;let i=index" cdkDrag>
+                    <mat-card-content class="data-title">{{item.title}}</mat-card-content>
+                    <mat-card-content class="data-description">{{item.desc}}</mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button color="warn" (click)="deleteData('todo',i)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+              </div>
+            </div>
+          
+            <div class="example-container">
+              <span class="inprogress-header">Inprogress</span>
+              <div
+                id="inProgress"
+                cdkDropList
+                [cdkDropListData]="inProgress"
+                class="example-list indi-data"
+                (cdkDropListDropped)="drop($event)">
+                <mat-card class="example-box inprogress-data" *ngFor="let item of inProgress;let i=index" cdkDrag>
+                    <mat-card-content class="data-title">{{item.title}}</mat-card-content>
+                    <mat-card-content class="data-description">{{item.desc}}</mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button color="warn" (click)="deleteData('inProgress',i)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+              </div>
+            </div>
+            
+            <div class="example-container">
+              <span class="onhold-header">Onhold</span>
+              <div
+                id="onHold"
+                cdkDropList
+                [cdkDropListData]="onHold"
+                class="example-list indi-data"
+                (cdkDropListDropped)="drop($event)">
+                <mat-card class="example-box onhold-data" *ngFor="let item of onHold;let i=index" cdkDrag>
+                    <mat-card-content class="data-title">{{item.title}}</mat-card-content>
+                    <mat-card-content class="data-description">{{item.desc}}</mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button color="warn" (click)="deleteData('onHold',i)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+              </div>
+            </div>
+        
+            <div class="example-container">
+              <span class="completed-header">Completed</span>
+              <div
+                id="completed"
+                cdkDropList
+                [cdkDropListData]="completed"
+                class="example-list indi-data"
+                (cdkDropListDropped)="drop($event)">
+                <mat-card class="example-box completed-data" *ngFor="let item of completed;let i=index" cdkDrag>
+                    <mat-card-content class="data-title">{{item.title}}</mat-card-content>
+                    <mat-card-content class="data-description">{{item.desc}}</mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button color="warn" (click)="deleteData('completed',i)">Delete</button>
+                    </mat-card-actions>
+                </mat-card>
+              </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

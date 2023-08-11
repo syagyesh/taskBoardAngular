@@ -1,0 +1,77 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+}
+
+.data-container {
+    margin: 3em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.example-container {
+    margin: 0 2em;
+}
+
+.example-container > span {
+    font-size: 20px;
+    color: #fff;
+    padding: .5em 7rem;
+    border-radius: 10px;
+}
+
+.todo-header{
+    padding: 0.2em 4em;
+    background-color: #1e88e5;
+}
+
+.inprogress-header {
+    padding: 0.2em 4em;
+    background-color: #ffb22b;
+}
+
+.onhold-header {
+    padding: 0.2em 4em;
+    background-color: #fc4b6c;
+}
+
+.completed-header {
+    padding: 0.2em 4em;
+    background-color: #26c6da;
+}
+
+.indi-data {
+    margin-top: 2em;
+}
+
+.todo-data {
+    margin: 1em 0;
+    background-color: #ecf2ff;
+}
+
+.inprogress-data {
+    margin: 1em 0;
+    background-color: #fef5e5;
+}
+
+.onhold-data {
+    margin: 1em 0;
+    background-color: #fdede8;
+}
+
+.completed-data {
+    margin: 1em 0;
+    background-color: #e6fffa;
+}
+
+.data-title {
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+
+.data-description {
+    font-size: 15px;
+}
